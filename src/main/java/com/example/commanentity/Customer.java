@@ -5,6 +5,8 @@ import com.example.commanentity.enums.Status;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import java.util.UUID;
 
@@ -20,7 +22,8 @@ public class Customer extends AbstractDomain{
     private String phoneNo;
     private String address;
     private String country;
-    private String state;
+
+    @Enumerated(EnumType.STRING)
     private Gender gender;
     private String Hobby;
     private String profileURL;
