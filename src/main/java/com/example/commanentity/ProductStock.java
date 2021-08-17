@@ -11,11 +11,11 @@ import java.util.UUID;
 @Entity
 public class ProductStock extends AbstractDomain {
     @Id
-    private String stockUID;
+    private String stockuid;
     private int qty;
 
     public ProductStock() {
-        this.stockUID = UUID.randomUUID().toString();
+        this.stockuid = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
 }

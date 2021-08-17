@@ -11,16 +11,16 @@ import java.util.UUID;
 @Entity
 public class Vendor extends AbstractDomain {
     @Id
-    private String vendorUID;
-    private String firstName;
-    private String lastName;
-    private String companyName;
-    private String emailId;
+    private String vendoruid;
+    private String firstname;
+    private String lastname;
+    private String companyname;
+    private String emailid;
     private String password;
-    private String phoneNo;
+    private String phoneno;
 
     public Vendor() {
-        this.vendorUID = UUID.randomUUID().toString();
+        this.vendoruid = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
 }

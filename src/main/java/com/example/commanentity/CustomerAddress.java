@@ -8,11 +8,11 @@ import java.util.UUID;
 @Data
 public class CustomerAddress {
     @Id
-    private String addressUID;
+    private String addressuid;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Customer")
-    private Customer customerUID;
+    private Customer customeruid;
 
     private String address1;
     private String address2;
@@ -28,6 +28,6 @@ public class CustomerAddress {
     private int pincode;
 
     public CustomerAddress(){
-        this.addressUID = UUID.randomUUID().toString();
+        this.addressuid = UUID.randomUUID().toString();
     }
 }

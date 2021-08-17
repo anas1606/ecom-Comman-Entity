@@ -9,16 +9,15 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Admin extends AbstractDomain {
+public class Admin {
     @Id
-    private String adminUID;
+    private String adminuid;
     private String username;
-    private String emailID;
+    private String emailid;
     private String password;
-    private String sessionToken;
+    private String sessiontoken;
 
     public Admin() {
-        this.adminUID = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
+        this.adminuid = UUID.randomUUID().toString();
     }
 }
