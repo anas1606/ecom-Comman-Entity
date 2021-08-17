@@ -11,21 +11,21 @@ import java.util.UUID;
 @Entity
 public class Customer extends AbstractDomain{
     @Id
-    private String customeruid;
-    private String firstname;
-    private String lastname;
+    private String id;
+    private String first_name;
+    private String last_name;
     private String emailid;
-    private int emailverificationotp;
+    private int email_verification_otp;
     private boolean emailverified;
     private String password;
-    private String phoneNo;
+    private String phoneno;
     @Enumerated(EnumType.STRING)
     private Gender gender;
-    private String Hobby;
-    private String profileurl;
+    private String hobby;
+    private String profile_url;
 
     public Customer(){
-        this.customeruid = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
 }

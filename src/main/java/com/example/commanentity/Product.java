@@ -10,20 +10,17 @@ import java.util.UUID;
 @Entity
 public class Product extends AbstractDomain {
     @Id
-    private String productuid;
-    private String productname;
+    private String id;
+
+    private String name;
     private String description;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ProductType")
-    private ProductType producttype;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ProductStock")
-    private ProductStock productstock;
+    private ProductType fk_producttype_id;
 
     public Product() {
-        this.productuid = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
 }

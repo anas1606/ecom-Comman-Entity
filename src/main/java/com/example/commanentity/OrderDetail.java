@@ -9,16 +9,16 @@ import java.util.UUID;
 @Entity
 public class OrderDetail extends AbstractDomain {
     @Id
-    private String orderid;
+    private String id;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Customer")
-    private Customer customeruid;
+    private Customer fk_customer_id;
 
     private int amount;
-    private int totalqty;
+    private int total_qty;
 
     public OrderDetail() {
-        this.orderid = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
     }
 }

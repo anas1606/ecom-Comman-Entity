@@ -13,23 +13,23 @@ public class AbstractDomain implements Serializable {
 
     @Column(updatable = true)
     @Temporal(TemporalType.TIMESTAMP)
-    private Calendar createdat;
+    private Calendar created_at;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private Calendar updatedat;
+    private Calendar updated_at;
 
-    private String updatedby;
+    private String updated_by;
 
     @Enumerated(EnumType.STRING)
     private Status status;
 
     @PrePersist
     public void updateCreateddDate() {
-        createdat = updatedat = Calendar.getInstance(TimeZone.getDefault());
+        created_at = updated_at = Calendar.getInstance(TimeZone.getDefault());
     }
 
     @PreUpdate
     public void updateUpdatedDate() {
-        updatedat = Calendar.getInstance(TimeZone.getDefault());
+        updated_at = Calendar.getInstance(TimeZone.getDefault());
     }
 }

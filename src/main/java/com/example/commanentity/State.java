@@ -11,11 +11,11 @@ import java.util.UUID;
 @Data
 public class State extends AbstractDomain {
     @Id
-    private String stateuid;
-    private String state;
+    private String id;
+    private String name;
 
     public State() {
-        this.stateuid = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
 }

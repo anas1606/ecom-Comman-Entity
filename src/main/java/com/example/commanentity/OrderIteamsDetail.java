@@ -9,18 +9,18 @@ import java.util.UUID;
 @Data
 public class OrderIteamsDetail {
     @Id
-    private String OrderIteamsDetailid;
+    private String id;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OrderDetail")
-    private OrderDetail orderid;
+    private OrderDetail fk_order_id;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Product")
-    private Product productuid;
+    private Product fk_product_id;
 
     private int qty;
     public OrderIteamsDetail() {
-        this.OrderIteamsDetailid = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
     }
 }

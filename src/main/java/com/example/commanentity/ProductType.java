@@ -11,11 +11,12 @@ import java.util.UUID;
 @Entity
 public class ProductType extends AbstractDomain {
     @Id
-    private String categoryuid;
+    private String id;
+
     private String category;
 
     public ProductType() {
-        this.categoryuid = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
 }

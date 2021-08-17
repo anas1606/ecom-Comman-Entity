@@ -11,11 +11,11 @@ import java.util.UUID;
 @Data
 public class Hobby extends AbstractDomain {
     @Id
-    private String hobbyuid;
+    private String id;
     private String hobby;
 
     public Hobby() {
-        this.hobbyuid = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
 }

@@ -11,13 +11,13 @@ import java.util.UUID;
 @Entity
 public class Admin {
     @Id
-    private String adminuid;
+    private String id;
     private String username;
     private String emailid;
     private String password;
-    private String sessiontoken;
+    private String session_token;
 
     public Admin() {
-        this.adminuid = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
     }
 }
