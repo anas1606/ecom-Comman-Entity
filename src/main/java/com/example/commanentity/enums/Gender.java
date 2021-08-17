@@ -6,10 +6,10 @@ import lombok.ToString;
 @Getter
 @ToString
 public enum Gender {
-    MALE("Male"),
-    FEMALE("Female");
+    MALE(0),
+    FEMALE(1);
 
-    private String gender;
+    private int gender;
 
-    Gender(String gender){this.gender = gender;}
+    Gender(int gender){this.gender = gender;}
 }

@@ -6,12 +6,12 @@ import lombok.ToString;
 @Getter
 @ToString
 public enum Status {
-    ACTIVE("Active"),
-    DEACTIVATE("Deactivate");
+    ACTIVE(1),
+    DEACTIVATE(0);
 
-    private String status;
+    private int status;
 
-    Status(String status) {
+    Status(int status) {
         this.status = status;
     }
 }

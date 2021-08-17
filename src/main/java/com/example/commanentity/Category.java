@@ -9,13 +9,13 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class ProductType extends AbstractDomain {
+public class Category extends AbstractDomain {
     @Id
     private String id;
 
     private String category;
 
-    public ProductType() {
+    public Category() {
         this.id = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
