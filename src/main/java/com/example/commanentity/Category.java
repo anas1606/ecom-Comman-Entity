@@ -13,7 +13,7 @@ public class Category extends AbstractDomain {
     @Id
     private String id;
 
-    private String category;
+    private String name;
 
     public Category() {
         this.id = UUID.randomUUID().toString();
