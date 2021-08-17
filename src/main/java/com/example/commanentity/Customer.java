@@ -21,7 +21,6 @@ public class Customer extends AbstractDomain{
     private String phoneno;
     @Enumerated(EnumType.STRING)
     private Gender gender;
-    private String hobby;
     private String profile_url;
 
     public Customer(){
