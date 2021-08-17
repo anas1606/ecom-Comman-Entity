@@ -14,11 +14,15 @@ public class Product extends AbstractDomain {
 
     private String name;
     private String description;
-    private int price;
+    private Double price;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_category_id")
     private Category category;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_vendor_id")
+    private Vendor vendor;
 
     public Product() {
         this.id = UUID.randomUUID().toString();
