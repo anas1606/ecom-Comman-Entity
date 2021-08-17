@@ -1,14 +1,13 @@
 package com.example.commanentity;
 
-import com.example.commanentity.enums.Status;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.UUID;
 
-@Entity
 @Data
-public class Order extends AbstractDomain {
+@Entity
+public class OrderDetail extends AbstractDomain {
     @Id
     private String orderID;
 
@@ -19,8 +18,7 @@ public class Order extends AbstractDomain {
     private int amount;
     private int qty;
 
-    public Order() {
+    public OrderDetail() {
         this.orderID = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
     }
 }

@@ -1,8 +1,8 @@
 package com.example.commanentity;
 
 import lombok.Data;
-
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -26,4 +26,8 @@ public class CustomerAddress {
     private State state;
 
     private int pincode;
+
+    public CustomerAddress(){
+        this.addressUID = UUID.randomUUID().toString();
+    }
 }
