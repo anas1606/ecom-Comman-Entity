@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class CustomerAdress {
+public class CustomerAddress {
     @Id
     private String addresUID;
 
