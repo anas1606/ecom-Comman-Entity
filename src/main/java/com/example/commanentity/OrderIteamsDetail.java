@@ -12,7 +12,7 @@ public class OrderIteamsDetail {
     private String id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_order_id")
+    @JoinColumn(name = "fk_orderdetail_id")
     private OrderDetail order;
 
     @OneToOne(fetch = FetchType.LAZY)
