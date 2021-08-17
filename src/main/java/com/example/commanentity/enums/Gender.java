@@ -6,8 +6,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public enum Gender {
-    MALE(0),
-    FEMALE(1);
+    MALE(1),
+    FEMALE(2),
+    OTHER(3);
 
     private int gender;
 
