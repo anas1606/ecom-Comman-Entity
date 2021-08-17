@@ -20,7 +20,7 @@ public class Product extends AbstractDomain {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ProductStock")
-    private ProductType productStock;
+    private ProductStock productStock;
 
     public Product() {
         this.productUID = UUID.randomUUID().toString();
