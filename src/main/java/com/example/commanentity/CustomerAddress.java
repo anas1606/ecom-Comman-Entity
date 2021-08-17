@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Data
 public class CustomerAddress {
     @Id
-    private String addresUID;
+    private String addressUID;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Customer")
