@@ -12,8 +12,8 @@ public class OrderDetail extends AbstractDomain {
     private String id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Customer")
-    private Customer fk_customer_id;
+    @JoinColumn(name = "fk_customer_id")
+    private Customer customer;
 
     private int amount;
     private int total_qty;

@@ -16,8 +16,8 @@ public class Product extends AbstractDomain {
     private String description;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ProductType")
-    private ProductType fk_producttype_id;
+    @JoinColumn(name = "fk_producttype_id")
+    private ProductType producttype;
 
     public Product() {
         this.id = UUID.randomUUID().toString();

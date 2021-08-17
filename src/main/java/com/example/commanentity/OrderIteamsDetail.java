@@ -12,12 +12,12 @@ public class OrderIteamsDetail {
     private String id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "OrderDetail")
-    private OrderDetail fk_order_id;
+    @JoinColumn(name = "fk_order_id")
+    private OrderDetail order;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Product")
-    private Product fk_product_id;
+    @JoinColumn(name = "fk_product_id")
+    private Product product;
 
     private int qty;
     public OrderIteamsDetail() {

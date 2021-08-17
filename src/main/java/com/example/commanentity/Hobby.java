@@ -12,7 +12,7 @@ import java.util.UUID;
 public class Hobby extends AbstractDomain {
     @Id
     private String id;
-    private String hobby;
+    private String name;
 
     public Hobby() {
         this.id = UUID.randomUUID().toString();

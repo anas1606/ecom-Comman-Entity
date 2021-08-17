@@ -11,19 +11,19 @@ public class CustomerAddress {
     private String id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Customer")
-    private Customer fk_customer_id;
+    @JoinColumn(name = "fk_customer_id")
+    private Customer customer;
 
     private String address1;
     private String address2;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Country")
-    private Country fk_country_id;
+    @JoinColumn(name = "fk_country_id")
+    private Country country;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "State")
-    private State fk_state_id;
+    @JoinColumn(name = "fk_state_id")
+    private State state;
 
     private int pincode;
 
