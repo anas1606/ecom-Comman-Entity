@@ -14,6 +14,7 @@ public class Product extends AbstractDomain {
 
     private String name;
     private String description;
+    private int price;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_category_id")
