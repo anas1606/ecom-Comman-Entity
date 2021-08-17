@@ -1,6 +1,5 @@
 package com.example.commanentity;
 
-import com.example.commanentity.enums.ProductStatus;
 import com.example.commanentity.enums.Status;
 import lombok.Data;
 
@@ -14,15 +13,17 @@ public class Product extends AbstractDomain {
     private String productUID;
     private String productName;
     private String description;
+
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ProductType")
     private ProductType productType;
-    @Enumerated(EnumType.ORDINAL)
-    private ProductStatus productStatus;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ProductStock")
+    private ProductType productStock;
 
     public Product() {
         this.productUID = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
-        this.productStatus = ProductStatus.INSTOCK;
     }
 }

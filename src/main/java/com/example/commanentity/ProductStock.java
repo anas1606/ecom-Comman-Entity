@@ -9,13 +9,13 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class ProductType extends AbstractDomain {
+public class ProductStock extends AbstractDomain {
     @Id
-    private String categoryUID;
-    private String category;
+    private String stockUID;
+    private int qty;
 
-    public ProductType() {
-        this.categoryUID = UUID.randomUUID().toString();
+    public ProductStock() {
+        this.stockUID = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE);
     }
 }
