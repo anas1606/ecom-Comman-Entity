@@ -1,18 +1,19 @@
 package com.example.commanentity;
 
 import lombok.Data;
+
 import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
 @Data
-public class CustomerAddress {
+public class Company_Address {
     @Id
     private String id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_customer_id")
-    private Customer customer;
+    @JoinColumn(name = "fk_vendor_id")
+    private Vendor vendor;
 
     private String address1;
     private String address2;
@@ -27,7 +28,7 @@ public class CustomerAddress {
 
     private int pincode;
 
-    public CustomerAddress(){
+    public Company_Address(){
         this.id = UUID.randomUUID().toString();
     }
 }

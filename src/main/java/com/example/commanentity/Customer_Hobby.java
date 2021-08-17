@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class OrderDetail extends AbstractDomain {
+public class Customer_Hobby {
     @Id
     private String id;
 
@@ -16,10 +16,10 @@ public class OrderDetail extends AbstractDomain {
     private Customer customer;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_product_id")
-    private Product product;
+    @JoinColumn(name = "fk_hobby_id")
+    private Hobby hobby;
 
-    public OrderDetail() {
+    public Customer_Hobby() {
         this.id = UUID.randomUUID().toString();
     }
 }

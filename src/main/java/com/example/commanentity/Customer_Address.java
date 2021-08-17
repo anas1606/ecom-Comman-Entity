@@ -1,13 +1,12 @@
 package com.example.commanentity;
 
 import lombok.Data;
-
 import javax.persistence.*;
 import java.util.UUID;
 
-@Data
 @Entity
-public class CustomerHobby {
+@Data
+public class Customer_Address {
     @Id
     private String id;
 
@@ -15,11 +14,20 @@ public class CustomerHobby {
     @JoinColumn(name = "fk_customer_id")
     private Customer customer;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_hobby_id")
-    private Hobby hobby;
+    private String address1;
+    private String address2;
 
-    public CustomerHobby() {
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_country_id")
+    private Country country;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_state_id")
+    private State state;
+
+    private int pincode;
+
+    public Customer_Address(){
         this.id = UUID.randomUUID().toString();
     }
 }
