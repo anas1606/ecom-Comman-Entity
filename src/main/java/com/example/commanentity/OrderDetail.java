@@ -19,8 +19,6 @@ public class OrderDetail extends AbstractDomain {
     @JoinColumn(name = "fk_product_id")
     private Product product;
 
-    private int amount;
-
     public OrderDetail() {
         this.id = UUID.randomUUID().toString();
     }
