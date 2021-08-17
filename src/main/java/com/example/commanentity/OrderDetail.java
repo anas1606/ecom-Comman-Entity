@@ -15,8 +15,11 @@ public class OrderDetail extends AbstractDomain {
     @JoinColumn(name = "fk_customer_id")
     private Customer customer;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_product_id")
+    private Product product;
+
     private int amount;
-    private int total_qty;
 
     public OrderDetail() {
         this.id = UUID.randomUUID().toString();
