@@ -15,6 +15,8 @@ public class Customer extends AbstractDomain{
     private String firstName;
     private String lastName;
     private String emailId;
+    private int emailVerificationOTP;
+    private boolean emailVerified;
     private String password;
     private String phoneNo;
     @Enumerated(EnumType.STRING)
