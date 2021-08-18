@@ -25,6 +25,6 @@ public class Customer extends AbstractDomain {
 
     public Customer() {
         this.id = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE.getStatus());
+        this.setStatus(Status.DEACTIVATE.getStatus());
     }
 }
