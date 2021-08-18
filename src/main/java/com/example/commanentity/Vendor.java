@@ -19,6 +19,7 @@ public class Vendor extends AbstractDomain {
     private String emailid;
     private String password;
     private String phoneno;
+    private String session_token;
 
     public Vendor() {
         this.id = UUID.randomUUID().toString();

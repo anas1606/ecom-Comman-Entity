@@ -22,6 +22,7 @@ public class Customer extends AbstractDomain{
     @Enumerated(EnumType.STRING)
     private Gender gender;
     private String profile_url;
+    private String session_token;
 
     public Customer(){
         this.id = UUID.randomUUID().toString();
