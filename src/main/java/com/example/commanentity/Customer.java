@@ -15,7 +15,7 @@ public class Customer extends AbstractDomain {
     private String first_name;
     private String last_name;
     private String emailid;
-    private int email_verification_otp;
+    private String email_verification_otp;
     private boolean emailverified;
     private String password;
     private String phoneno;
