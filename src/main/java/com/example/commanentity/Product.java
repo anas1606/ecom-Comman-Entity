@@ -26,6 +26,6 @@ public class Product extends AbstractDomain {
 
     public Product() {
         this.id = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
+        this.setStatus(Status.ACTIVE.getStatus());
     }
 }

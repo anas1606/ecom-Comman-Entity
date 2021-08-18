@@ -19,9 +19,8 @@ public class AbstractDomain implements Serializable {
     private Calendar updated_at;
 
     private String updated_by;
-
-    @Enumerated(EnumType.STRING)
-    private Status status;
+    
+    private int status;
 
     @PrePersist
     public void updateCreateddDate() {

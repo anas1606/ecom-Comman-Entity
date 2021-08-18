@@ -16,6 +16,6 @@ public class State extends AbstractDomain {
 
     public State() {
         this.id = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
+        this.setStatus(Status.ACTIVE.getStatus());
     }
 }

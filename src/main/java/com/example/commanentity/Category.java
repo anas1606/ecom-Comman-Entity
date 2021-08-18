@@ -17,6 +17,6 @@ public class Category extends AbstractDomain {
 
     public Category() {
         this.id = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
+        this.setStatus(Status.ACTIVE.getStatus());
     }
 }

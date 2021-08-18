@@ -23,6 +23,6 @@ public class Vendor extends AbstractDomain {
 
     public Vendor() {
         this.id = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
+        this.setStatus(Status.ACTIVE.getStatus());
     }
 }

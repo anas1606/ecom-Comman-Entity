@@ -9,7 +9,7 @@ public enum Status {
     ACTIVE(1),
     DEACTIVATE(0);
 
-    private int status;
+    private final int status;
 
     Status(int status) {
         this.status = status;

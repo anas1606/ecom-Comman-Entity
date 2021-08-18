@@ -16,6 +16,6 @@ public class Country extends AbstractDomain {
 
     public Country() {
         this.id = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
+        this.setStatus(Status.ACTIVE.getStatus());
     }
 }

@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Customer extends AbstractDomain{
+public class Customer extends AbstractDomain {
     @Id
     private String id;
     private String first_name;
@@ -19,13 +19,12 @@ public class Customer extends AbstractDomain{
     private boolean emailverified;
     private String password;
     private String phoneno;
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
+    private int gender;
     private String profile_url;
     private String session_token;
 
-    public Customer(){
+    public Customer() {
         this.id = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
+        this.setStatus(Status.ACTIVE.getStatus());
     }
 }

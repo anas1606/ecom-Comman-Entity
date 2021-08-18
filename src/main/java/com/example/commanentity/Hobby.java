@@ -16,6 +16,6 @@ public class Hobby extends AbstractDomain {
 
     public Hobby() {
         this.id = UUID.randomUUID().toString();
-        this.setStatus(Status.ACTIVE);
+        this.setStatus(Status.ACTIVE.getStatus());
     }
 }
