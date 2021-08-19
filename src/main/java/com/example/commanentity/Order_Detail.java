@@ -1,5 +1,6 @@
 package com.example.commanentity;
 
+import com.example.commanentity.enums.Status;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -21,5 +22,6 @@ public class Order_Detail extends AbstractDomain {
 
     public Order_Detail() {
         this.id = UUID.randomUUID().toString();
+        this.setStatus(Status.ACTIVE.getStatus());
     }
 }
