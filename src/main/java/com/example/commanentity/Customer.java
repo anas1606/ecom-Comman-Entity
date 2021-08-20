@@ -1,6 +1,5 @@
 package com.example.commanentity;
 
-import com.example.commanentity.enums.Gender;
 import com.example.commanentity.enums.Status;
 import lombok.Data;
 

@@ -1,6 +1,5 @@
 package com.example.commanentity;
 
-import com.example.commanentity.enums.Status;
 import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
