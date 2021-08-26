@@ -7,7 +7,7 @@ import java.util.UUID;
 @Entity
 @Data
 @Table(name = "customer_address")
-public class customerAddress {
+public class CustomerAddress {
     @Id
     private String id;
 
@@ -28,7 +28,7 @@ public class customerAddress {
 
     private String pincode;
 
-    public customerAddress(){
+    public CustomerAddress(){
         this.id = UUID.randomUUID().toString();
     }
 }
