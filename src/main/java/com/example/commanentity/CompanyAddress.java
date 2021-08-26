@@ -7,7 +7,6 @@ import java.util.UUID;
 
 @Entity
 @Data
-@Table(name = "company_address")
 public class CompanyAddress {
     @Id
     private String id;

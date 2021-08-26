@@ -7,7 +7,6 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "customer_hobby")
 public class CustomerHobby {
     @Id
     private String id;

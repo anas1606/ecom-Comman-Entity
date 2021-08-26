@@ -8,7 +8,6 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name="order_detail")
 public class OrderDetail extends AbstractDomain {
     @Id
     private String id;
