@@ -8,7 +8,7 @@ import java.util.UUID;
 @Data
 @Entity
 @Table(name = "customer_hobby")
-public class customerHobby {
+public class CustomerHobby {
     @Id
     private String id;
 
@@ -20,7 +20,7 @@ public class customerHobby {
     @JoinColumn(name = "fk_hobby_id")
     private Hobby hobby;
 
-    public customerHobby() {
+    public CustomerHobby() {
         this.id = UUID.randomUUID().toString();
     }
 }
