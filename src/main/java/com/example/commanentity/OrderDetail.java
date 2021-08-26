@@ -8,7 +8,8 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Order_Detail extends AbstractDomain {
+@Table(name="order_detail")
+public class OrderDetail extends AbstractDomain {
     @Id
     private String id;
 
@@ -20,7 +21,7 @@ public class Order_Detail extends AbstractDomain {
     @JoinColumn(name = "fk_product_id")
     private Product product;
 
-    public Order_Detail() {
+    public OrderDetail() {
         this.id = UUID.randomUUID().toString();
         this.setStatus(Status.ACTIVE.getStatus());
     }
