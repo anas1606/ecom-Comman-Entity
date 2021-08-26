@@ -7,7 +7,8 @@ import java.util.UUID;
 
 @Entity
 @Data
-public class Company_Address {
+@Table(name = "company_address")
+public class CompanyAddress {
     @Id
     private String id;
 
@@ -26,9 +27,9 @@ public class Company_Address {
     @JoinColumn(name = "fk_state_id")
     private State state;
 
-    private int pincode;
+    private String pincode;
 
-    public Company_Address(){
+    public CompanyAddress(){
         this.id = UUID.randomUUID().toString();
     }
 }
