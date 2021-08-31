@@ -1,11 +1,13 @@
 package com.example.commanentity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
 @Data
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class CustomerAddress {
     @Id
     private String id;
